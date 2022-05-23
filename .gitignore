@@ -23,6 +23,7 @@
 hs_err_pid*
 
 # SpringJPA 프로젝트 설정파일
+SpringJPA/.idea
 SpringJPA/target
 
 # jpashop 프로젝트 설정파일
