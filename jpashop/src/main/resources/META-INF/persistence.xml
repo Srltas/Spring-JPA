@@ -8,16 +8,9 @@
             <!-- H2 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
-            <property name="javax.persistence.jdbc.password" value=""/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <property name="javax.persistence.jdbc.password" value="sa123"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/jpashop"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-
-            <!-- CUBRID 속성 -->
-<!--            <property name="javax.persistence.jdbc.driver" value="cubrid.jdbc.driver.CUBRIDDriver"/>-->
-<!--            <property name="javax.persistence.jdbc.user" value="dba"/>-->
-<!--            <property name="javax.persistence.jdbc.password" value=""/>-->
-<!--            <property name="javax.persistence.jdbc.url" value="jdbc:cubrid:172.31.201.17:33000:hadb:public::?charSet=utf-8"/>-->
-<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.CUBRIDDialect"/>-->
 
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true"/>
