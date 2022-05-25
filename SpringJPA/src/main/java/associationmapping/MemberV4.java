@@ -2,7 +2,7 @@ package associationmapping;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class MemberV4 {
 
     @Id

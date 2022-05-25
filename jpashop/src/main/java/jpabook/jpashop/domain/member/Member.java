@@ -1,11 +1,14 @@
-package jpabook.jpashop.domain;
+package jpabook.jpashop.domain.member;
+
+import jpabook.jpashop.domain.config.BaseEntity;
+import jpabook.jpashop.domain.order.Order;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
