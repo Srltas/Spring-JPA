@@ -2,7 +2,7 @@ package inheritancerelationmapping;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 @Inheritance(strategy = InheritanceType.JOINED) //조인 전략으로 테이블 생성
 //@Inheritance(strategy = InheritanceType.SINGLE_TABLE) //단일 테이블 전략으로 테이블 생성
 //@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) //구현 클래스마다 테이블 전략으로 테이블 생성
