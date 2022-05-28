@@ -17,6 +17,15 @@ public class Order extends BaseEntity {
     @Column(name = "ORDER_ID")
     private Long id;
 
+    @Column( updatable = false, insertable = false, columnDefinition = "timestamp default current_timestamp")
+    private LocalDateTime time1;
+
+    @Column(columnDefinition = "integer default 0")
+    private int number;
+
+    @Column(columnDefinition = "timestamp default null")
+    private LocalDateTime time2;
+
 //    @Column(name = "MEMBER_ID")
 //    private Long memberId;
 

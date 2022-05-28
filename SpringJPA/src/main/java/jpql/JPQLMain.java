@@ -1,14 +1,18 @@
-package jpabook.jpashop;
+package jpql;
 
-import jpabook.jpashop.domain.item.Book;
-import jpabook.jpashop.domain.order.Order;
+
+import embeddedtype.Address;
+import embeddedtype.MemberV6;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.List;
+import java.util.Set;
 
-public class JpaMain {
+public class JPQLMain {
+
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
 
@@ -19,14 +23,10 @@ public class JpaMain {
 
         try {
 
-            Book book = new Book();
-            book.setName("자바 ORM 표준 JPA");
-            book.setAuthor("김영한");
-
-           // em.persist(book);
-
-            Order order = new Order();
-            em.persist(order);
+            List<MemberV7> resultList = em.createQuery(
+                    "select m From MemberV7 m where m.username like '%kim%'",
+                    MemberV7.class
+            ).getResultList();
 
             tx.commit();
         } catch(Exception e) {

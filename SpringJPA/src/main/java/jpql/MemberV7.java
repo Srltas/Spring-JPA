@@ -1,6 +1,6 @@
-package embeddedtype;
+package jpql;
 
-import delayload.Team;
+import embeddedtype.Address;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -8,8 +8,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-//@Entity
-public class MemberV6 {
+@Entity
+public class MemberV7 {
 
     @Id
     @GeneratedValue
