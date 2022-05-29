@@ -1,4 +1,4 @@
-package jpql;
+package jpql.entity;
 
 public class MemberDTO {
 

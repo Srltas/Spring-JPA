@@ -1,12 +1,15 @@
 package jpql;
 
+import jpql.entity.Member;
+import jpql.entity.Team;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.List;
 
-public class jpqlMain {
+public class JpqlMain {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
@@ -40,7 +43,7 @@ public class jpqlMain {
 //                    .getSingleResult();
 
 //            [프로젝션 - DTO를 만들어서 조회]
-//            List<MemberDTO> resultList = em.createQuery("select new jpql.MemberDTO(m.username, m.age) from Member m", MemberDTO.class)
+//            List<MemberDTO> resultList = em.createQuery("select new jpql.entity.MemberDTO(m.username, m.age) from Member m", MemberDTO.class)
 //                    .getResultList();
 //
 //            MemberDTO memberDTO = resultList.get(0);
@@ -62,7 +65,7 @@ public class jpqlMain {
 //            String query = "select m from Member m inner join m.team t";
             String query = "select m from Member m left outer join m.team t";
 //            String query = "select m from Member m, Team t where m.username = t.name";
-            
+
             List<Member> result = em.createQuery(query, Member.class)
                     .getResultList();
 
